@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup
 import requests
-from treelib import Node, Tree
+# from treelib import Node, Tree
 from time import sleep
 import json
 
@@ -9,8 +9,12 @@ testURL = baseURL+"readtac$ext.TacPage?sl=R&app=9&p_dir=&p_rloc=&p_tloc=&p_ploc=
 startURL = "https://texreg.sos.state.tx.us/public/readtac$ext.ViewTAC?tac_view=5&ti=40&pt=1&ch=46&sch=A&rl=Y"
 regDomain = "texreg.sos.state.tx.us"
 
-tree = Tree()
+# tree = Tree()
 linksQueue = []
+# list of visited links
+visitedList = []
+# alternative to tree
+linkDic = {}
 def getHtmlFromWeb(inputURL:str) -> str:
 
     #print(f"Should get a document from url: {inputURL}")
@@ -55,42 +59,49 @@ def crawl(startURL:str):
     htmlStr:str = getHtmlFromWeb(startURL)
     linksFromCurrentURL = extractLinksFromHTML(htmlStr)
     linksNotVisited = []
+    linkDic[startURL] = []
     for link in linksFromCurrentURL:
-        currentNode = tree.get_node(link)
-        # check if the node has been visited
-        if currentNode is None:
-            tree.create_node(link,link,parent=startURL)
+        
+        # check if the link has been visited
+        if link not in visitedList:
+            linkDic[startURL].append(link)
             linksNotVisited.append(link)
     
-            
+    visitedList.append(startURL)
     return linksNotVisited
 
 def saveTree():
     with open('tree.json', 'w') as f:
-        
-        json.dump(tree.to_dict(),f,ensure_ascii=True,indent=4)
+        json.dump(linkDic,f,ensure_ascii=True,indent=4)
         f.close()
 def saveQueue():
     with open('queue.json', 'w') as q:
         data = {"queue": linksQueue}
         json.dump(data,q,ensure_ascii=True,indent=4)
         q.close()
+def saveVisitedList():
+    with open('visited.json', 'w') as v:
+        data = {"visited": visitedList}
+        json.dump(data,v,ensure_ascii=True,indent=4)
+        v.close()
 
 def saveSnapshot():
     print("Saving tree")
     saveTree()
     print("Saving queue")
     saveQueue()
+    print("Sasving Visited list")
+    saveVisitedList()
 
 
 if __name__ == '__main__':
     print("Wayahead Texas Gov regulation site Assisted living Crawler")
-    tree.create_node(startURL, startURL) # creates the root nodes
+    visitedList.append(startURL) # addthe initial link
     linksQueue.append(startURL)
     iterationsToSave = 10
     currentItirations = 0
     while linksQueue.count != 0:
-        print(f"Links left in queue {len(linksQueue)}")
+        print(f"In queue {len(linksQueue)}, Visited: {len(visitedList)}")
         linksNotVisited = crawl(startURL=linksQueue.pop())
         linksQueue.extend(linksNotVisited) # addes links not visited to the queue
         sleep(1)
@@ -103,6 +114,5 @@ if __name__ == '__main__':
     # htmlStr:str = getHtmlFromWeb(startURL)
     # parseHTML(htmlStr=htmlStr)
     print("Finished traverse")
-    tree.show()
     
     saveSnapshot()
