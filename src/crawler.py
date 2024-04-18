@@ -102,7 +102,7 @@ if __name__ == '__main__':
     currentItirations = 0
     while linksQueue.count != 0:
         print(f"In queue {len(linksQueue)}, Visited: {len(visitedList)}")
-        linksNotVisited = crawl(startURL=linksQueue.pop())
+        linksNotVisited = crawl(startURL=linksQueue.pop(-1))
         linksQueue.extend(linksNotVisited) # addes links not visited to the queue
         sleep(1)
         if currentItirations == iterationsToSave:
