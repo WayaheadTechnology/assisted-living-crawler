@@ -1,6 +1,5 @@
 from bs4 import BeautifulSoup
 import requests
-# from treelib import Node, Tree
 from time import sleep
 import json
 import sys
@@ -86,14 +85,18 @@ def crawl(rootURL:str):
     linksFromCurrentURL = extractLinksFromHTML(htmlStr)
     visitedList.append(rootURL) # add visited url
     linksNotVisited = []
-    linkDic[rootURL] = []
+    # Check if the dic has that entry if not initilze it to an empty array
+    try:
+        linkDic[rootURL]
+    except:
+        linkDic[rootURL] = []
+    
     for link in linksFromCurrentURL:
-        
         # check if the link has been visited or is a banned link
         if (link not in visitedList) and (link not in dotNotGoPaths):
+            # add the link to the dictionary
             linkDic[rootURL].append(link)
             linksNotVisited.append(link)
-    
     
     return linksNotVisited
 
@@ -160,7 +163,7 @@ def getVisitedFromFile(fName:str) -> list:
 
 if __name__ == '__main__':
     print("Wayahead Texas Gov regulation site Assisted living Crawler")
-    if len(sys.argv) > 0:
+    if len(sys.argv) > 1:
         inFile = sys.argv[1]
         inFile2 = sys.argv[2]
         inFile3 = sys.argv[3]

@@ -1,0 +1,33 @@
+{
+    "https://texreg.sos.state.tx.us/public/readtac$ext.ViewTAC?tac_view=5&ti=40&pt=1&ch=46&sch=A&rl=Y": [
+        "https://texreg.sos.state.tx.us/public/readtac$ext.ViewTAC?tac_view=2&ti=40",
+        "https://texreg.sos.state.tx.us/public/readtac$ext.ViewTAC?tac_view=3&ti=40&pt=1",
+        "https://texreg.sos.state.tx.us/public/readtac$ext.ViewTAC?tac_view=4&ti=40&pt=1&ch=46",
+        "https://texreg.sos.state.tx.us/public/readtac$ext.TacPage?sl=R&app=9&p_dir=&p_rloc=&p_tloc=&p_ploc=&pg=1&p_tac=&ti=40&pt=1&ch=46&rl=1",
+        "https://texreg.sos.state.tx.us/public/readtac$ext.TacPage?sl=R&app=9&p_dir=&p_rloc=&p_tloc=&p_ploc=&pg=1&p_tac=&ti=40&pt=1&ch=46&rl=3"
+    ],
+    "https://texreg.sos.state.tx.us/public/readtac$ext.TacPage?sl=R&app=9&p_dir=&p_rloc=&p_tloc=&p_ploc=&pg=1&p_tac=&ti=40&pt=1&ch=46&rl=3": [],
+    "https://texreg.sos.state.tx.us/public/readtac$ext.TacPage?sl=R&app=9&p_dir=&p_rloc=&p_tloc=&p_ploc=&pg=1&p_tac=&ti=40&pt=1&ch=46&rl=1": [],
+    "https://texreg.sos.state.tx.us/public/readtac$ext.ViewTAC?tac_view=4&ti=40&pt=1&ch=46": [
+        "https://texreg.sos.state.tx.us/public/readtac$ext.ViewTAC?tac_view=5&ti=40&pt=1&ch=46&sch=B&rl=Y",
+        "https://texreg.sos.state.tx.us/public/readtac$ext.ViewTAC?tac_view=5&ti=40&pt=1&ch=46&sch=B&rl=Y",
+        "https://texreg.sos.state.tx.us/public/readtac$ext.ViewTAC?tac_view=5&ti=40&pt=1&ch=46&sch=C&rl=Y",
+        "https://texreg.sos.state.tx.us/public/readtac$ext.ViewTAC?tac_view=5&ti=40&pt=1&ch=46&sch=C&rl=Y",
+        "https://texreg.sos.state.tx.us/public/readtac$ext.ViewTAC?tac_view=5&ti=40&pt=1&ch=46&sch=D&rl=Y",
+        "https://texreg.sos.state.tx.us/public/readtac$ext.ViewTAC?tac_view=5&ti=40&pt=1&ch=46&sch=D&rl=Y"
+    ],
+    "https://texreg.sos.state.tx.us/public/readtac$ext.ViewTAC?tac_view=5&ti=40&pt=1&ch=46&sch=D&rl=Y": [
+        "https://texreg.sos.state.tx.us/public/readtac$ext.TacPage?sl=R&app=9&p_dir=&p_rloc=&p_tloc=&p_ploc=&pg=1&p_tac=&ti=40&pt=1&ch=46&rl=61",
+        "https://texreg.sos.state.tx.us/public/readtac$ext.TacPage?sl=R&app=9&p_dir=&p_rloc=&p_tloc=&p_ploc=&pg=1&p_tac=&ti=40&pt=1&ch=46&rl=63",
+        "https://texreg.sos.state.tx.us/public/readtac$ext.TacPage?sl=R&app=9&p_dir=&p_rloc=&p_tloc=&p_ploc=&pg=1&p_tac=&ti=40&pt=1&ch=46&rl=65",
+        "https://texreg.sos.state.tx.us/public/readtac$ext.TacPage?sl=R&app=9&p_dir=&p_rloc=&p_tloc=&p_ploc=&pg=1&p_tac=&ti=40&pt=1&ch=46&rl=67",
+        "https://texreg.sos.state.tx.us/public/readtac$ext.TacPage?sl=R&app=9&p_dir=&p_rloc=&p_tloc=&p_ploc=&pg=1&p_tac=&ti=40&pt=1&ch=46&rl=69",
+        "https://texreg.sos.state.tx.us/public/readtac$ext.TacPage?sl=R&app=9&p_dir=&p_rloc=&p_tloc=&p_ploc=&pg=1&p_tac=&ti=40&pt=1&ch=46&rl=71"
+    ],
+    "https://texreg.sos.state.tx.us/public/readtac$ext.TacPage?sl=R&app=9&p_dir=&p_rloc=&p_tloc=&p_ploc=&pg=1&p_tac=&ti=40&pt=1&ch=46&rl=71": [],
+    "https://texreg.sos.state.tx.us/public/readtac$ext.TacPage?sl=R&app=9&p_dir=&p_rloc=&p_tloc=&p_ploc=&pg=1&p_tac=&ti=40&pt=1&ch=46&rl=69": [],
+    "https://texreg.sos.state.tx.us/public/readtac$ext.TacPage?sl=R&app=9&p_dir=&p_rloc=&p_tloc=&p_ploc=&pg=1&p_tac=&ti=40&pt=1&ch=46&rl=67": [],
+    "https://texreg.sos.state.tx.us/public/readtac$ext.TacPage?sl=R&app=9&p_dir=&p_rloc=&p_tloc=&p_ploc=&pg=1&p_tac=&ti=40&pt=1&ch=46&rl=65": [],
+    "https://texreg.sos.state.tx.us/public/readtac$ext.TacPage?sl=R&app=9&p_dir=&p_rloc=&p_tloc=&p_ploc=&pg=1&p_tac=&ti=40&pt=1&ch=46&rl=63": [],
+    "https://texreg.sos.state.tx.us/public/readtac$ext.TacPage?sl=R&app=9&p_dir=&p_rloc=&p_tloc=&p_ploc=&pg=1&p_tac=&ti=40&pt=1&ch=46&rl=61": []
+}
