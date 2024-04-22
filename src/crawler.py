@@ -74,7 +74,10 @@ def generateURLWithBaseURL(url:str) -> str:
     if("http" in url):
         return url
     else:
-        return baseURL+url
+        if(url[0] == "/"):
+            return baseURL+url[1:]
+        else:
+            return baseURL+url
 
 
 def crawl(rootURL:str):
