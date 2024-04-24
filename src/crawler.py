@@ -74,7 +74,9 @@ def generateURLWithBaseURL(url:str) -> str:
         return url
     else:
         if(url[0] == "/"):
-            return baseURL+url[1:]
+            # gets ride of the /public/ in the base url
+            # the first forward slash means it is not in this local direcotry it is in the root of the site
+            return baseURL[:-8]+url
         else:
             return baseURL+url
 

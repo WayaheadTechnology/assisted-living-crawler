@@ -4,6 +4,7 @@ import json
 from bs4 import BeautifulSoup
 import requests
 from time import sleep
+from tqdm import tqdm
 
 
 treeDic:dict = {}
@@ -56,13 +57,14 @@ def saveIndexedURLS():
 def indexURLs():
     saveIterations = 10
     currentIteration = 0
-    for key,value in treeDic.items():
+    for key,value in tqdm(treeDic.items()):
         if len(value) == 0:
             
             parseURL(key)
             currentIteration += 1
             if currentIteration%10 == 0:
                 saveIndexedURLS()
+        sleep(0.5)
     saveIndexedURLS()
 
 
@@ -73,7 +75,7 @@ if __name__ == '__main__':
         treeFileName = sys.argv[1]
         loadTreeDic(treeFileName)
     print("Scraper")
-    print("Test")
-    test()
-    treeDic = loadTreeDic('test.json')
+    # print("Test")
+    # test()
+    treeDic = loadTreeDic('tree.json')
     indexURLs()
