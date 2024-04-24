@@ -38,11 +38,14 @@ def parseURL(urlStr:str):
 
     htmlStr:str = requests.get(urlStr).text
     parsedHTML = BeautifulSoup(htmlStr, 'html.parser')
-    # finds the html tag that has 
-    listOfRules = parsedHTML.find_all('ss')
+    # finds the html tag that has
     readableText = ""
-    for item in listOfRules:
-        readableText += item.getText()
+    if ".html" in urlStr:
+        pass
+    else:
+        listOfRules = parsedHTML.find_all('ss')
+        for item in listOfRules:
+            readableText += item.getText()
 
     custom_kw_extractor = yake.KeywordExtractor()
     keyTerms = custom_kw_extractor.extract_keywords(readableText)
